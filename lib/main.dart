@@ -16,18 +16,24 @@ class Home extends StatelessWidget{
         title: Text('My First App'),
         centerTitle: true
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[          
-          Text("hello World"),
-          FloatingActionButton(
-            onPressed: ()=>{},
-            child: Text("button inside")),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
           Container(
-            color: Colors.amber[600],
-            padding: EdgeInsets.all(30.0),
-            child: Text("Hello container"),
+            padding: EdgeInsets.all(20.0),
+            color: Colors.cyan,
+            child: Text("one")
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.yellow[700],
+            child: Text("two")
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.red[600],
+            child: Text("three")
           )
         ],
       ),
