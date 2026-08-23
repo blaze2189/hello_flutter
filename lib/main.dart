@@ -14,10 +14,14 @@ class Home extends StatelessWidget{
       appBar: AppBar(
         backgroundColor: Colors.green[800],
         title: Text('My First App'),
-        centerTitle: true,
+        centerTitle: true
       ),
       body: Center(
-        child: Image.asset('assets/215167.jpg')
+        child: Icon(
+          Icons.airport_shuttle,
+          color: Colors.green,
+          size: 50.0
+        )
       ),
       floatingActionButton: FloatingActionButton( 
         onPressed: ()=>(), 
