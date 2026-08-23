@@ -17,12 +17,13 @@ class Home extends StatelessWidget{
         centerTitle: true
       ),
       body: Center(
-        child: FloatingActionButton(
-          onPressed: ()=>{
-            print: ('you clicked me!!!')
-          },
-          child: Text("Click Me!!!"),
-          backgroundColor: Colors.lightBlue[600],
+        child: IconButton(
+          onPressed: ()=>{},
+          icon: Icon(
+            Icons.car_crash
+          ),
+          //text: Text('Crashed')
+          color: Colors.amber[600],
         )
       ),
       floatingActionButton: FloatingActionButton( 
