@@ -16,12 +16,10 @@ class Home extends StatelessWidget{
         title: Text('My First App'),
         centerTitle: true
       ),
-      body: Container(
-        padding: EdgeInsets.fromLTRB(10.0,20.0,30.0,40.0),
-        margin: EdgeInsets.fromLTRB(10.0,20.0,30.0,40.0),
-        color: Colors.grey[400],
+      body: Padding(
+        padding: EdgeInsets.all(30),
         child: Text("hello world!!"),
-      ),
+        ),
       floatingActionButton: FloatingActionButton( 
         onPressed: ()=>(), 
         backgroundColor: Colors.green[350],
