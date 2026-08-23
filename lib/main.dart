@@ -16,15 +16,11 @@ class Home extends StatelessWidget{
         title: Text('My First App'),
         centerTitle: true
       ),
-      body: Center(
-        child: IconButton(
-          onPressed: ()=>{},
-          icon: Icon(
-            Icons.car_crash
-          ),
-          //text: Text('Crashed')
-          color: Colors.amber[600],
-        )
+      body: Container(
+        padding: EdgeInsets.fromLTRB(10.0,20.0,30.0,40.0),
+        margin: EdgeInsets.fromLTRB(10.0,20.0,30.0,40.0),
+        color: Colors.grey[400],
+        child: Text("hello world!!"),
       ),
       floatingActionButton: FloatingActionButton( 
         onPressed: ()=>(), 
