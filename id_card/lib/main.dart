@@ -8,7 +8,15 @@ void main() {
 }
 
 
-class IdCard extends StatelessWidget{
+class IdCard extends StatefulWidget{
+  @override
+  State<IdCard> createState() => _IdCardState();
+}
+
+class _IdCardState extends State<IdCard> {
+
+  int ninjaLevel=0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,6 +26,15 @@ class IdCard extends StatelessWidget{
           centerTitle: true,
           backgroundColor: Colors.green[800],
           elevation: 0.0,
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){
+            setState(() {
+              ninjaLevel+=1;
+            });
+          },
+          backgroundColor: Colors.green[600],
+          child: Icon(Icons.add)
         ),
         body: Padding(
           padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -57,7 +74,7 @@ class IdCard extends StatelessWidget{
                 ),
               ),
               SizedBox(height: 10.0,),
-              Text('8',
+              Text('$ninjaLevel',
                 style: TextStyle(
                   color: Colors.green[200],
                   fontSize: 28.0,
@@ -87,5 +104,5 @@ class IdCard extends StatelessWidget{
           ),
       );
   }
-
 }
+
