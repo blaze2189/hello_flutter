@@ -27,9 +27,19 @@ class _CoffeeListState extends State<CoffeeList> {
         backgroundColor: Colors.green,
       ),
       body: Column(
-        children: coffees.map((coffee) => CoffeeCard(coffee:coffee)).toList(),
+        children: coffees
+            .map(
+              (coffee) => CoffeeCard(
+                coffee: coffee,
+                delete: () {
+                  setState(() {
+                    coffees.remove(coffee);
+                  });
+                },
+              ),
+            )
+            .toList(),
       ),
     );
   }
 }
-

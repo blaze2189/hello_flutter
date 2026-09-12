@@ -3,7 +3,8 @@ import 'coffee.dart';
 
 class CoffeeCard extends StatelessWidget {
   final Coffee coffee;
-  CoffeeCard({required this.coffee});
+  final VoidCallback delete;
+  CoffeeCard({required this.coffee, required this.delete});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,8 @@ class CoffeeCard extends StatelessWidget {
               coffee.price.toString(),
               style: TextStyle(fontSize: 14.0, color: Colors.grey[800]),
             ),
+            SizedBox(height: 8.0),
+            IconButton(onPressed: delete, icon: Icon(Icons.delete)),
           ],
         ),
       ),
