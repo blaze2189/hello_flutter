@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'coffee_card.dart';
 import 'coffee.dart';
 
 void main() {
@@ -13,31 +14,8 @@ class CoffeeList extends StatefulWidget {
 class _CoffeeListState extends State<CoffeeList> {
   List<Coffee> coffees = [
     Coffee(name: "mexicano", price: 10.00),
-    Coffee(name: "latte", price: 20.04),
+    Coffee(name: "latte", price: 20.05),
   ];
-
-  Widget coffeTemplate(coffe) {
-    return Card(
-      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Text(
-              coffe.name,
-              style: TextStyle(fontSize: 18.0, color: Colors.black),
-            ),
-            SizedBox(height: 6.0),
-            Text(
-              coffe.price.toString(),
-              style: TextStyle(fontSize: 14.0, color: Colors.grey[800]),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +27,9 @@ class _CoffeeListState extends State<CoffeeList> {
         backgroundColor: Colors.green,
       ),
       body: Column(
-        children: coffees
-            .map((coffee) => coffeTemplate(coffee))
-            .toList(),
+        children: coffees.map((coffee) => CoffeeCard(coffee:coffee)).toList(),
       ),
     );
   }
 }
+
