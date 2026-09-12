@@ -25,7 +25,7 @@ class _IdCardState extends State<IdCard> {
           title: Text('Id Card'),
           centerTitle: true,
           backgroundColor: Colors.green[800],
-          elevation: 0.0,
+          elevation: 5.0,
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: (){
