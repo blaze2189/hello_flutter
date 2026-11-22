@@ -11,6 +11,7 @@ WorldTime({required this.url,required this.location,required this.time});
 
 
 Future<void> getTime() async{
+  try{
   http.Response response = await http.get(Uri.parse('https://time.now/developer/api/time?timezone=Europe%2FLondon'));
   print(response );
   Map date = jsonDecode(response.body);
@@ -22,6 +23,10 @@ Future<void> getTime() async{
   print(dateTime);
   print(offset);
   time = dateTime;
+  }catch(e){
+    print(e);
+    time = 'Could not get date time';
+  }
 }
 
 }
